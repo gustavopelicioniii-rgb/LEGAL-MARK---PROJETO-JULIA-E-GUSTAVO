@@ -34,29 +34,29 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
               Dúvidas Frequentes sobre Registro de Marca
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground px-4">
               Respondemos as principais questões para você tomar a melhor decisão.
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-border rounded-lg px-6 shadow-sm hover:shadow-md transition-smooth bg-card"
+                className="border border-border rounded-lg px-4 sm:px-6 shadow-sm hover:shadow-md transition-smooth bg-card"
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-accent hover:no-underline py-6">
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-accent hover:no-underline py-4 sm:py-6 text-sm sm:text-base">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-4 sm:pb-6 text-sm sm:text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

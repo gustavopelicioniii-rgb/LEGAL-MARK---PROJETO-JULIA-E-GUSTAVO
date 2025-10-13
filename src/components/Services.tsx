@@ -36,15 +36,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-12 sm:py-16 lg:py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Outros Serviços que Realizamos
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -52,15 +52,15 @@ const Services = () => {
                 key={index} 
                 className="border-none shadow-sm hover:shadow-lg transition-smooth bg-card"
               >
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-start space-y-4">
-                    <div className="p-4 rounded-xl bg-accent/10 text-accent">
-                      <Icon className="w-8 h-8" />
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex flex-col items-start space-y-3 sm:space-y-4">
+                    <div className="p-3 sm:p-4 rounded-xl bg-accent/10 text-accent">
+                      <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
                   </div>

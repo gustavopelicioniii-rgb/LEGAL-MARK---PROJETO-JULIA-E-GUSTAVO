@@ -29,18 +29,18 @@ const steps = [
 
 const Process = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Como Funciona o Registro de Marca
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Um processo simples e transparente, dividido em 4 etapas essenciais.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -50,23 +50,23 @@ const Process = () => {
                   <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-accent/20 -translate-x-1/2 z-0" />
                 )}
                 
-                <div className="relative z-10 space-y-4">
+                <div className="relative z-10 space-y-3 sm:space-y-4">
                   {/* Icon Circle */}
                   <div className="relative">
-                    <div className="w-24 h-24 mx-auto rounded-full bg-gradient-accent flex items-center justify-center shadow-accent">
-                      <Icon className="w-10 h-10 text-white" />
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full bg-gradient-accent flex items-center justify-center shadow-accent">
+                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-12 h-12 rounded-full bg-gold text-gold-foreground flex items-center justify-center font-bold text-lg shadow-md">
+                    <div className="absolute -top-2 -right-2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold text-gold-foreground flex items-center justify-center font-bold text-base sm:text-lg shadow-md">
                       {step.number}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="text-center space-y-2">
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
                   </div>
