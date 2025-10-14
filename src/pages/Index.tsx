@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <ExitIntentPopup />
     </main>
   );
 };
