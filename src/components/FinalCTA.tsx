@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle } from "lucide-react";
 
 const FinalCTA = () => {
-  const whatsappNumber = "5511999999999"; // Número deve ser configurado pelo cliente
+  const whatsappNumber = "5511912200912";
   const whatsappMessage = encodeURIComponent("Olá! Quero saber mais sobre como registrar minha marca.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

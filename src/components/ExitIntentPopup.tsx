@@ -13,7 +13,7 @@ const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
 
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5511912200912";
   const whatsappMessage = encodeURIComponent("Olá! Não quero perder a oportunidade de proteger minha marca!");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

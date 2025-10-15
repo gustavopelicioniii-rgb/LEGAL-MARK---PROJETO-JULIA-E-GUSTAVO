@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Users, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-entrepreneur.jpg";
+import logo from "@/assets/logo.jpg";
 
 const Hero = () => {
-  const whatsappNumber = "5511999999999"; // Número deve ser configurado pelo cliente
+  const whatsappNumber = "5511912200912";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de registrar minha marca.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -21,6 +22,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="text-white space-y-6 sm:space-y-8">
+            {/* Logo */}
+            <div className="mb-4">
+              <img src={logo} alt="Marca Legal Logo" className="h-16 sm:h-20 w-auto" />
+            </div>
+            
             {/* Badges */}
             <div className="flex flex-wrap gap-2 sm:gap-3">
               <Badge variant="secondary" className="bg-accent/20 text-white border-accent/30 backdrop-blur-sm py-1.5 px-3 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">

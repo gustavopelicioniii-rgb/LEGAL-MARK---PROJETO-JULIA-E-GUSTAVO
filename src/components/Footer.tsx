@@ -1,10 +1,9 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5511912200912";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
-  const email = "contato@marcalegal.com.br";
-  const cnpj = "00.000.000/0000-00";
+  const email = "legalmarkregistro@gmail.com";
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -17,9 +16,6 @@ const Footer = () => {
               Especialistas em Registro de Marca e Propriedade Intelectual. 
               Atendimento em todo o Brasil.
             </p>
-            <div className="text-xs sm:text-sm text-primary-foreground/70">
-              CNPJ: {cnpj}
-            </div>
           </div>
 
           {/* Services */}
@@ -45,7 +41,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>(11) 99999-9999</span>
+                <span>(11) 91220-0912</span>
               </a>
               <a 
                 href={`mailto:${email}`}
