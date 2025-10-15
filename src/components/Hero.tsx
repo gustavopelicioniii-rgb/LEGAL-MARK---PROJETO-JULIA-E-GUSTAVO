@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Users, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-entrepreneur.jpg";
-import logo from "@/assets/logo.jpg";
+import heroImage from "@/assets/hero-brand-protection.jpg";
 
 const Hero = () => {
   const whatsappNumber = "5511912200912";
@@ -22,11 +21,6 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="text-white space-y-6 sm:space-y-8">
-            {/* Logo */}
-            <div className="mb-4">
-              <img src={logo} alt="Marca Legal Logo" className="h-16 sm:h-20 w-auto" />
-            </div>
-            
             {/* Badges */}
             <div className="flex flex-wrap gap-2 sm:gap-3">
               <Badge variant="secondary" className="bg-accent/20 text-white border-accent/30 backdrop-blur-sm py-1.5 px-3 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
@@ -99,7 +93,7 @@ const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={heroImage} 
-                alt="Empresário confiante - Especialistas em Registro de Marca"
+                alt="Registro de Marca e Proteção de Propriedade Intelectual"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
