@@ -18,9 +18,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-0 items-center relative">
           {/* Content */}
-          <div className="text-white space-y-6 sm:space-y-8">
+          <div className="text-white space-y-6 sm:space-y-8 relative z-20 lg:pr-8">
             {/* Badges */}
             <div className="flex flex-wrap gap-2 sm:gap-3">
               <Badge variant="secondary" className="bg-accent/20 text-white border-accent/30 backdrop-blur-sm py-1.5 px-3 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
@@ -89,8 +89,8 @@ const Hero = () => {
           </div>
 
           {/* Image */}
-          <div className="relative lg:block hidden">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative lg:block hidden lg:-ml-16 z-10">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl scale-110">
               <img 
                 src={heroImage} 
                 alt="Registro de Marca e Proteção de Propriedade Intelectual"
@@ -100,7 +100,7 @@ const Hero = () => {
             </div>
             
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-gold text-gold-foreground p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-gold text-gold-foreground p-6 rounded-xl shadow-lg z-30">
               <div className="text-3xl font-bold">+1.000</div>
               <div className="text-sm font-medium">Marcas Protegidas</div>
             </div>
