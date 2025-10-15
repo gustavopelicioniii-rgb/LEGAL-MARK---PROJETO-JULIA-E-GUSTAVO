@@ -100,7 +100,7 @@ const Hero = () => {
             </div>
             
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-gold text-gold-foreground p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-gold text-gold-foreground p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold">+1.000</div>
               <div className="text-sm font-medium">Marcas Protegidas</div>
             </div>
