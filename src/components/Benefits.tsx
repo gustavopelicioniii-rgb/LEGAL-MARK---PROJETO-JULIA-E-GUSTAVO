@@ -33,7 +33,7 @@ const Benefits = () => {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Por que Registrar Sua Marca com a Gente?
           </h2>
@@ -48,7 +48,8 @@ const Benefits = () => {
             return (
               <Card 
                 key={index} 
-                className="border-none shadow-md hover:shadow-xl transition-smooth group"
+                className="border-none shadow-md hover:shadow-xl transition-smooth group animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6 sm:p-8">
                   <div className="flex flex-col items-start space-y-3 sm:space-y-4">

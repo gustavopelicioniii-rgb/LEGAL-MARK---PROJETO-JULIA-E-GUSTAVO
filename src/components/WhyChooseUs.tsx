@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
     <section className="py-12 sm:py-16 lg:py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         {/* Stats Section */}
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Por Que Escolher a Marca Legal?
           </h2>
@@ -57,7 +57,8 @@ const WhyChooseUs = () => {
             return (
               <div 
                 key={index}
-                className="bg-card rounded-xl p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition-smooth border border-border/50"
+                className="bg-card rounded-xl p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition-smooth border border-border/50 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 text-primary mb-4">
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
@@ -77,7 +78,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Differentials */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center text-foreground mb-6 sm:mb-8">
             Nossos Diferenciais
           </h3>

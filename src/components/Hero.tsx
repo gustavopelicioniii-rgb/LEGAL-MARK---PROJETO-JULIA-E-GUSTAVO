@@ -18,11 +18,11 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-20 relative z-10">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-0 items-center relative">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
           {/* Content */}
-          <div className="text-white space-y-6 sm:space-y-8 relative z-20 lg:pr-8">
+          <div className="text-white space-y-6 sm:space-y-8 relative z-20 animate-fade-in">
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <Badge variant="secondary" className="bg-accent/20 text-white border-accent/30 backdrop-blur-sm py-1.5 px-3 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
                 <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 +1.000 Marcas Registradas
@@ -34,18 +34,18 @@ const Hero = () => {
             </div>
 
             {/* Headline */}
-            <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <div className="space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
                 Registre sua Marca e Proteja o Nome do Seu Negócio com Segurança e Rapidez
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed drop-shadow-md">
                 Evite que copiem sua marca e garanta exclusividade legal em todo o Brasil. 
                 Cuidamos de tudo para você, do início ao fim.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <Button 
                 variant="cta" 
                 size="xl" 
@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                 <span className="text-xs sm:text-sm text-white/80">Atendimento Personalizado</span>
@@ -89,8 +89,8 @@ const Hero = () => {
           </div>
 
           {/* Image */}
-          <div className="relative lg:block hidden lg:-ml-16 z-10">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl scale-110">
+          <div className="relative lg:block hidden z-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={heroImage} 
                 alt="Registro de Marca e Proteção de Propriedade Intelectual"

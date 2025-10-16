@@ -31,7 +31,7 @@ const Process = () => {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Como Funciona o Registro de Marca
           </h2>
@@ -44,7 +44,7 @@ const Process = () => {
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <div key={index} className="relative">
+              <div key={index} className="relative animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-accent/20 -translate-x-1/2 z-0" />

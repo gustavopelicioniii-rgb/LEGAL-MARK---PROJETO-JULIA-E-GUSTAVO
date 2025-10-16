@@ -16,7 +16,7 @@ const FinalCTA = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white space-y-6 sm:space-y-8">
+        <div className="max-w-4xl mx-auto text-center text-white space-y-6 sm:space-y-8 animate-fade-in">
           {/* Icon */}
           <div className="inline-flex p-3 sm:p-4 rounded-full bg-accent/20 backdrop-blur-sm">
             <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-accent" />

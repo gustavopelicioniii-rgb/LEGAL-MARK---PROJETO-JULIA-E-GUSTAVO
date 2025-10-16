@@ -37,7 +37,7 @@ const FAQ = () => {
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
               Dúvidas Frequentes sobre Registro de Marca
             </h2>
@@ -46,7 +46,7 @@ const FAQ = () => {
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
