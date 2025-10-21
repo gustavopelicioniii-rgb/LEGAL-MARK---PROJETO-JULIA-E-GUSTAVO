@@ -50,12 +50,12 @@ const FinalCTA = () => {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4 px-4">
             <Button 
               variant="cta" 
-              size="xl"
+              size="lg"
               asChild
-              className="group w-full sm:w-auto"
+              className="group w-full sm:w-auto text-sm sm:text-base"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 Quero Registrar Agora
@@ -67,9 +67,9 @@ const FinalCTA = () => {
             
             <Button 
               variant="whatsapp" 
-              size="xl"
+              size="lg"
               asChild
-              className="group w-full sm:w-auto"
+              className="group w-full sm:w-auto text-sm sm:text-base"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">

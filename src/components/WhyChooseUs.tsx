@@ -101,50 +101,70 @@ const WhyChooseUs = () => {
           })}
         </div>
 
-        {/* Differentials - Fishbone Layout */}
+        {/* Differentials */}
         <div className="max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center text-foreground mb-10 sm:mb-16">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center text-foreground mb-8 sm:mb-12">
             Nossos Diferenciais
           </h3>
           
-          {/* Fishbone container */}
-          <div className="relative">
+          {/* Mobile: Simple vertical cards layout */}
+          <div className="md:hidden space-y-4">
+            {differentials.map((differential, index) => (
+              <div 
+                key={index}
+                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border/50 shadow-sm animate-fade-in"
+                style={{ animationDelay: `${0.5 + index * 0.1}s` }}
+              >
+                <img 
+                  src={differential.icon} 
+                  alt="" 
+                  className="w-12 h-12 flex-shrink-0"
+                />
+                <p className="text-sm text-foreground font-medium">
+                  {differential.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Fishbone layout */}
+          <div className="hidden md:block relative">
             {/* Central vertical line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform -translate-x-1/2" />
             
             {/* Items */}
-            <div className="space-y-8 md:space-y-12">
+            <div className="space-y-12">
               {differentials.map((differential, index) => {
                 const isLeft = index % 2 === 0;
                 return (
                   <div 
                     key={index}
-                    className={`flex items-center gap-4 md:gap-8 animate-fade-in ${
-                      isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
+                    className={`flex items-center gap-8 animate-fade-in ${
+                      isLeft ? 'flex-row' : 'flex-row-reverse'
                     }`}
                     style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                   >
                     {/* Content */}
-                    <div className={`flex-1 ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
-                      <div className={`inline-flex items-center gap-4 p-4 sm:p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-smooth ${
-                        isLeft ? 'flex-row' : 'flex-row-reverse md:flex-row'
+                    <div className={`flex-1 ${isLeft ? 'text-right' : 'text-left'}`}>
+                      <div className={`inline-flex items-center gap-4 p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-smooth ${
+                        isLeft ? 'flex-row' : 'flex-row-reverse'
                       }`}>
                         <img 
                           src={differential.icon} 
                           alt="" 
-                          className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
+                          className="w-16 h-16 flex-shrink-0"
                         />
-                        <p className="text-sm sm:text-base text-foreground font-medium">
+                        <p className="text-base text-foreground font-medium">
                           {differential.text}
                         </p>
                       </div>
                     </div>
                     
                     {/* Center dot connector */}
-                    <div className="hidden md:flex flex-shrink-0 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
+                    <div className="flex flex-shrink-0 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
                     
                     {/* Spacer for alignment */}
-                    <div className="flex-1 hidden md:block" />
+                    <div className="flex-1" />
                   </div>
                 );
               })}

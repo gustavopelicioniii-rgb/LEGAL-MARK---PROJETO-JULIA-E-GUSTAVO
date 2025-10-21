@@ -16,8 +16,8 @@ const Index = () => {
       <Process />
       <Testimonials />
       <WhyChooseUs />
-      <FAQ />
       <FinalCTA />
+      <FAQ />
       <Footer />
       <ExitIntentPopup />
     </main>
