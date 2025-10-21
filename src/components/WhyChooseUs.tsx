@@ -1,4 +1,10 @@
 import { Shield, Clock, Award, ThumbsUp } from "lucide-react";
+import iconHandshake from "@/assets/icon-handshake.png";
+import iconAnalysis from "@/assets/icon-analysis.png";
+import iconTracking from "@/assets/icon-tracking.png";
+import iconSupport from "@/assets/icon-support.png";
+import iconPricing from "@/assets/icon-pricing.png";
+import iconExperience from "@/assets/icon-experience.png";
 
 const stats = [
   {
@@ -28,12 +34,30 @@ const stats = [
 ];
 
 const differentials = [
-  "Atendimento personalizado e consultoria especializada",
-  "Análise de viabilidade gratuita da sua marca",
-  "Acompanhamento em tempo real do processo",
-  "Suporte completo durante todo o registro",
-  "Preços transparentes sem taxas ocultas",
-  "Experiência com marcas de diversos segmentos"
+  {
+    text: "Atendimento personalizado e consultoria especializada",
+    icon: iconHandshake
+  },
+  {
+    text: "Análise de viabilidade gratuita da sua marca",
+    icon: iconAnalysis
+  },
+  {
+    text: "Acompanhamento em tempo real do processo",
+    icon: iconTracking
+  },
+  {
+    text: "Suporte completo durante todo o registro",
+    icon: iconSupport
+  },
+  {
+    text: "Preços transparentes sem taxas ocultas",
+    icon: iconPricing
+  },
+  {
+    text: "Experiência com marcas de diversos segmentos",
+    icon: iconExperience
+  }
 ];
 
 const WhyChooseUs = () => {
@@ -77,25 +101,54 @@ const WhyChooseUs = () => {
           })}
         </div>
 
-        {/* Differentials */}
-        <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center text-foreground mb-6 sm:mb-8">
+        {/* Differentials - Fishbone Layout */}
+        <div className="max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center text-foreground mb-10 sm:mb-16">
             Nossos Diferenciais
           </h3>
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-            {differentials.map((differential, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-3 p-4 rounded-lg bg-card/50 border border-border/30"
-              >
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                </div>
-                <p className="text-sm sm:text-base text-foreground">
-                  {differential}
-                </p>
-              </div>
-            ))}
+          
+          {/* Fishbone container */}
+          <div className="relative">
+            {/* Central vertical line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform -translate-x-1/2 hidden md:block" />
+            
+            {/* Items */}
+            <div className="space-y-8 md:space-y-12">
+              {differentials.map((differential, index) => {
+                const isLeft = index % 2 === 0;
+                return (
+                  <div 
+                    key={index}
+                    className={`flex items-center gap-4 md:gap-8 animate-fade-in ${
+                      isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
+                    style={{ animationDelay: `${0.5 + index * 0.1}s` }}
+                  >
+                    {/* Content */}
+                    <div className={`flex-1 ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
+                      <div className={`inline-flex items-center gap-4 p-4 sm:p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-smooth ${
+                        isLeft ? 'flex-row' : 'flex-row-reverse md:flex-row'
+                      }`}>
+                        <img 
+                          src={differential.icon} 
+                          alt="" 
+                          className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
+                        />
+                        <p className="text-sm sm:text-base text-foreground font-medium">
+                          {differential.text}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Center dot connector */}
+                    <div className="hidden md:flex flex-shrink-0 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
+                    
+                    {/* Spacer for alignment */}
+                    <div className="flex-1 hidden md:block" />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
