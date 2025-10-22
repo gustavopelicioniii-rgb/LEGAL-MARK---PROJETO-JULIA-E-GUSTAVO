@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
 
           {/* Image */}
-          <div className="relative z-10 animate-fade-in mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
+          <div className="relative z-10 animate-fade-in mt-4 lg:mt-0" style={{ animationDelay: '0.2s' }}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={heroImage} 
