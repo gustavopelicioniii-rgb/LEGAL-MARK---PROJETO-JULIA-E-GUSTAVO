@@ -22,23 +22,23 @@ const Hero = () => {
           {/* Content */}
           <div className="text-white space-y-6 sm:space-y-8 relative z-20 animate-fade-in">
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <Badge variant="secondary" className="bg-accent/20 text-white border-accent/30 backdrop-blur-sm py-1.5 px-3 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
-                <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+            <div className="flex gap-2 sm:gap-3 animate-fade-in justify-center lg:justify-start" style={{ animationDelay: '0.1s' }}>
+              <Badge variant="secondary" className="bg-accent/20 text-white border-accent/30 backdrop-blur-sm py-1.5 px-2.5 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                 +1.000 Marcas Registradas
               </Badge>
-              <Badge variant="secondary" className="bg-gold/20 text-white border-gold/30 backdrop-blur-sm py-1.5 px-3 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
-                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+              <Badge variant="secondary" className="bg-gold/20 text-white border-gold/30 backdrop-blur-sm py-1.5 px-2.5 sm:py-2 sm:px-4 text-xs sm:text-sm font-medium">
+                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                 5+ Anos de Experiência
               </Badge>
             </div>
 
             {/* Headline */}
-            <div className="space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight drop-shadow-lg">
+            <div className="space-y-3 sm:space-y-4 animate-fade-in text-center lg:text-left" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-snug sm:leading-tight drop-shadow-lg">
                 Registre sua Marca e Proteja o Nome do Seu Negócio com Segurança e Rapidez
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed drop-shadow-md">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed sm:leading-relaxed drop-shadow-md max-w-2xl mx-auto lg:mx-0">
                 Evite que copiem sua marca e garanta exclusividade legal em todo o Brasil. 
                 Cuidamos de tudo para você, do início ao fim.
               </p>
