@@ -95,6 +95,8 @@ const Hero = () => {
                 src={heroImage} 
                 alt="Registro de Marca e Proteção de Propriedade Intelectual"
                 className="w-full h-auto object-cover max-h-[300px] sm:max-h-[400px] lg:max-h-none"
+                loading="eager"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>

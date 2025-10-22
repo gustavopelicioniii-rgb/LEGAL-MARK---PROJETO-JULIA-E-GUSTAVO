@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="space-y-3 sm:space-y-4">
-            <img src={logo} alt="Marca Legal" className="h-12 sm:h-16 w-auto mb-2" />
+            <img src={logo} alt="Marca Legal" className="h-12 sm:h-16 w-auto mb-2" loading="lazy" />
             <h3 className="text-lg sm:text-xl font-bold">Marca Legal</h3>
             <p className="text-xs sm:text-sm text-primary-foreground/80 leading-relaxed">
               Especialistas em Registro de Marca e Propriedade Intelectual. 

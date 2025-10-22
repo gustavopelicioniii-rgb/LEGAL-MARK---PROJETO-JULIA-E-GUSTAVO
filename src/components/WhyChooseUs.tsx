@@ -119,6 +119,7 @@ const WhyChooseUs = () => {
                   src={differential.icon} 
                   alt="" 
                   className="w-12 h-12 flex-shrink-0"
+                  loading="lazy"
                 />
                 <p className="text-sm text-foreground font-medium">
                   {differential.text}
@@ -153,6 +154,7 @@ const WhyChooseUs = () => {
                           src={differential.icon} 
                           alt="" 
                           className="w-16 h-16 flex-shrink-0"
+                          loading="lazy"
                         />
                         <p className="text-base text-foreground font-medium">
                           {differential.text}

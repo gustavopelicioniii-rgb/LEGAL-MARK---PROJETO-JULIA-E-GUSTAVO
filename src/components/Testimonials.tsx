@@ -64,6 +64,7 @@ const Testimonials = () => {
                       src={testimonial.image} 
                       alt={`Foto de ${testimonial.name}`}
                       className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover flex-shrink-0"
+                      loading="lazy"
                     />
                     <div>
                       <div className="font-bold text-foreground text-sm sm:text-base">

@@ -20,7 +20,7 @@ const FinalCTA = () => {
         <div className="max-w-4xl mx-auto text-center text-white space-y-6 sm:space-y-8 animate-fade-in">
           {/* Icon */}
           <div className="inline-flex p-3 sm:p-4 rounded-full bg-white/10 backdrop-blur-sm">
-            <img src={iconSecurity} alt="Segurança" className="w-16 h-16 sm:w-20 sm:h-20" />
+            <img src={iconSecurity} alt="Segurança" className="w-16 h-16 sm:w-20 sm:h-20" loading="lazy" />
           </div>
 
           {/* Headline */}
