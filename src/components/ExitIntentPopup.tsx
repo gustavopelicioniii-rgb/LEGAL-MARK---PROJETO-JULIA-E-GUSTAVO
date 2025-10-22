@@ -12,6 +12,7 @@ import { AlertCircle, MessageCircle, Shield } from "lucide-react";
 const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
+  const [canShow, setCanShow] = useState(false);
 
   const whatsappNumber = "5511912200912";
   const whatsappMessage = encodeURIComponent("Olá! Não quero perder a oportunidade de proteger minha marca!");
@@ -25,9 +26,20 @@ const ExitIntentPopup = () => {
       return;
     }
 
+    // Wait 3 seconds before enabling exit intent detection
+    const enableTimer = setTimeout(() => {
+      setCanShow(true);
+    }, 3000);
+
+    return () => clearTimeout(enableTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!canShow || hasShown) return;
+
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse leaves from the top and hasn't been shown yet
-      if (e.clientY <= 0 && !hasShown && !isOpen) {
+      // Only trigger if mouse leaves from the top with low Y coordinate
+      if (e.clientY <= 10 && !hasShown && !isOpen) {
         setIsOpen(true);
         setHasShown(true);
         sessionStorage.setItem("exitPopupShown", "true");
@@ -39,7 +51,7 @@ const ExitIntentPopup = () => {
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [hasShown, isOpen]);
+  }, [canShow, hasShown, isOpen]);
 
   const handleWhatsAppClick = () => {
     window.open(whatsappLink, "_blank");
