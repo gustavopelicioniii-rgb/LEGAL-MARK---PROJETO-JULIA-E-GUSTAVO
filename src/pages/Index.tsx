@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <FAQ />
       <Footer />
       <ExitIntentPopup />
+      <FloatingWhatsApp />
     </main>
   );
 };
