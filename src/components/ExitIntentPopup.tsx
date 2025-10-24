@@ -76,10 +76,10 @@ const ExitIntentPopup = () => {
             
             <DialogHeader className="space-y-3">
               <DialogTitle className="text-2xl sm:text-3xl font-bold text-white">
-                Espere! Não Vá Embora Ainda
+                ⚠️ Espere! Você Está Prestes a Perder Sua Marca
               </DialogTitle>
               <DialogDescription className="text-base sm:text-lg text-white/90">
-                Sua marca pode estar desprotegida neste momento
+                <strong>ALERTA:</strong> Neste exato momento, outras empresas estão tentando registrar marcas semelhantes
               </DialogDescription>
             </DialogHeader>
           </div>
@@ -87,25 +87,38 @@ const ExitIntentPopup = () => {
 
         {/* Content */}
         <div className="p-6 sm:p-8 space-y-6">
+          <div className="bg-red-500/10 border border-red-500/30 p-4 rounded-lg mb-4">
+            <p className="text-sm sm:text-base text-foreground font-bold text-center">
+              🚨 <span className="text-red-600">URGENTE:</span> 3 empresas consultaram marcas similares hoje
+            </p>
+          </div>
+          
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <p className="text-sm sm:text-base text-foreground">
-                A cada dia que passa, aumenta o risco de alguém registrar sua marca antes de você
+                <strong>Sem registro, você pode perder tudo:</strong> Outra empresa pode registrar seu nome e te impedir de usar sua própria marca
+              </p>
+            </div>
+            
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+              <p className="text-sm sm:text-base text-foreground">
+                <strong>Prejuízo garantido:</strong> Você terá que mudar nome, logo, materiais e perderá toda sua reputação construída
               </p>
             </div>
             
             <div className="flex items-start gap-3">
               <MessageCircle className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
               <p className="text-sm sm:text-base text-foreground">
-                Fale agora com um especialista e tire suas dúvidas sem compromisso
+                Converse conosco AGORA e regularize isso ANTES que seja tarde demais
               </p>
             </div>
           </div>
 
-          <div className="bg-secondary/50 p-4 rounded-lg border border-primary/20">
-            <p className="text-xs sm:text-sm text-center font-medium text-foreground">
-              ✨ <strong>Oferta Especial:</strong> Análise gratuita de viabilidade da sua marca
+          <div className="bg-accent/20 p-4 rounded-lg border border-accent/40">
+            <p className="text-xs sm:text-sm text-center font-bold text-foreground">
+              ⚡ <span className="text-accent-foreground">VAGAS LIMITADAS:</span> Apenas 7 vagas para análise gratuita hoje
             </p>
           </div>
 
