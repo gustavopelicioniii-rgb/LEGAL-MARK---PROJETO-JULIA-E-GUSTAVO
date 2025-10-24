@@ -25,7 +25,7 @@ const PricingSection = () => {
             Invista na Proteção da Sua Marca
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Planos completos com tudo que você precisa para registrar sua marca com segurança
+            Planos a partir de R$ 1.500 reais
           </p>
         </div>
 

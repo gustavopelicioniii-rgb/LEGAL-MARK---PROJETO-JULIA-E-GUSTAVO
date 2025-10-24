@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Por que você deveria contratar a Secure Marcas?
+              Por que você deveria contratar a Legal Marcas?
             </h3>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
               A resposta é simples: somos uma das melhores empresas do mercado e você pode comparar isso facilmente com as demais.
@@ -120,7 +120,7 @@ const WhyChooseUs = () => {
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 mb-6">
                 <h5 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white text-center mb-2">
-                  Secure Marcas
+                  Legal Marcas
                 </h5>
                 <p className="text-white/80 text-center text-sm sm:text-base">
                   Registro Completo
@@ -176,7 +176,7 @@ const WhyChooseUs = () => {
           <div className="mt-6 sm:mt-8 text-center">
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-smooth text-sm sm:text-base inline-flex items-center gap-2 shadow-lg">
               <Shield className="w-5 h-5" />
-              Registrar com a Secure
+              Registrar com a Legal Marcas
             </button>
           </div>
         </div>
