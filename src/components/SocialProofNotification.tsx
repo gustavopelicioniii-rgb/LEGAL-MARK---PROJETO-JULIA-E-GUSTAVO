@@ -25,41 +25,44 @@ const SocialProofNotification = () => {
   const [currentClient, setCurrentClient] = useState("");
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    let intervalId: NodeJS.Timeout;
-
+    console.log('🔔 SocialProofNotification component mounted');
+    
     const showNotification = () => {
       const randomClient = clientNames[Math.floor(Math.random() * clientNames.length)];
       setCurrentClient(randomClient);
       setIsVisible(true);
+      console.log('✅ Showing notification for:', randomClient);
 
-      timeoutId = setTimeout(() => {
+      setTimeout(() => {
         setIsVisible(false);
-      }, 5000);
+        console.log('❌ Hiding notification');
+      }, 5000); // Visível por 5 segundos
     };
 
-    // Primeira notificação após 15 segundos
-    const initialDelay = setTimeout(() => {
+    // Primeira notificação após 5 segundos (reduzido para teste)
+    const initialTimer = setTimeout(() => {
+      console.log('⏰ First notification triggered');
       showNotification();
-      
-      // Após a primeira notificação, inicia o intervalo
-      intervalId = setInterval(() => {
-        showNotification();
-      }, 20000); // 15s visível + 5s de pausa = 20s total
+    }, 5000);
+
+    // Notificações subsequentes a cada 15 segundos
+    const interval = setInterval(() => {
+      console.log('⏰ Interval notification triggered');
+      showNotification();
     }, 15000);
 
     return () => {
-      clearTimeout(initialDelay);
-      clearTimeout(timeoutId);
-      if (intervalId) clearInterval(intervalId);
+      console.log('🔔 SocialProofNotification component unmounted');
+      clearTimeout(initialTimer);
+      clearInterval(interval);
     };
   }, []);
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-24 left-4 right-4 sm:bottom-6 sm:left-auto sm:right-6 z-[100] animate-fade-in">
-      <div className="bg-card border-2 border-accent/20 rounded-lg shadow-xl p-3 sm:p-4 w-full sm:max-w-sm backdrop-blur-sm">
+    <div className="fixed bottom-24 left-4 right-4 sm:bottom-6 sm:left-auto sm:right-6 z-[9999] animate-fade-in">
+      <div className="bg-card border-2 border-accent/20 rounded-lg shadow-2xl p-3 sm:p-4 w-full sm:max-w-sm backdrop-blur-md">
         <div className="flex items-start gap-2 sm:gap-3">
           <div className="flex-shrink-0">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent/10 flex items-center justify-center">
