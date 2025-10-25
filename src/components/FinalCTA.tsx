@@ -30,7 +30,7 @@ const FinalCTA = () => {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto px-4">
-            Cada dia, novas empresas registram nomes no INPI. Proteja o nome do seu negócio agora e evite problemas futuros.
+            Cada dia, novas empresas registram nomes no INPI. Proteja o nome do seu negócio agora e evite problemas futuros com a sua empresa.
           </p>
 
           {/* Benefits */}
