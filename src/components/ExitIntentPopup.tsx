@@ -13,10 +13,15 @@ const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
   const [canShow, setCanShow] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const whatsappNumber = "5511912200912";
   const whatsappMessage = encodeURIComponent("Olá! Não quero perder a oportunidade de proteger minha marca!");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+  };
 
   useEffect(() => {
     // Check if popup was already shown in this session
@@ -34,8 +39,9 @@ const ExitIntentPopup = () => {
     return () => clearTimeout(enableTimer);
   }, []);
 
+  // Desktop exit intent (mouse leave)
   useEffect(() => {
-    if (!canShow || hasShown) return;
+    if (!canShow || hasShown || isMobile()) return;
 
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if mouse leaves from the top with low Y coordinate
@@ -52,6 +58,48 @@ const ExitIntentPopup = () => {
       document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [canShow, hasShown, isOpen]);
+
+  // Mobile exit intent (scroll up + time based)
+  useEffect(() => {
+    if (!canShow || hasShown || !isMobile()) return;
+
+    let scrollUpCount = 0;
+    let timeoutId: NodeJS.Timeout;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Detect scroll up (user trying to go back to top/exit)
+      if (currentScrollY < lastScrollY && currentScrollY > 100) {
+        scrollUpCount++;
+        
+        // If user scrolled up 3 times, show popup
+        if (scrollUpCount >= 3 && !hasShown && !isOpen) {
+          setIsOpen(true);
+          setHasShown(true);
+          sessionStorage.setItem("exitPopupShown", "true");
+        }
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    // Also show after 20 seconds on mobile if not shown yet
+    timeoutId = setTimeout(() => {
+      if (!hasShown && !isOpen) {
+        setIsOpen(true);
+        setHasShown(true);
+        sessionStorage.setItem("exitPopupShown", "true");
+      }
+    }, 20000);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [canShow, hasShown, isOpen, lastScrollY]);
 
   const handleWhatsAppClick = () => {
     window.open(whatsappLink, "_blank");
